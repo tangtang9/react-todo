@@ -1,0 +1,167 @@
+@font-face {
+    font-family: Lato;
+    src: url("https://fonts.googleapis.com/css?family=Lato:300,400,900,900i");
+}
+
+* {
+    box-sizing: border-box;
+}
+html{
+    @apply h-full;
+}
+body {
+    @apply h-full;
+    font-family:"Microsoft YaHei", "Lato", sans-serif;
+    background: #f5f6f9;
+}
+
+
+.wrapper {
+    @apply bg-gray-100 max-w-2xl m-auto shadow-md;
+    min-height: 50rem;  
+    background: url(./bg.png) no-repeat;
+    background-size: 100% auto;
+}
+.top-title{
+    @apply flex;
+    padding:3rem 0;
+}
+.title {
+    @apply text-xl font-bold tracking-wide text-center text-gray-700 flex-1 -ml-12;
+    font-family:Microsoft YaHei;
+}
+
+.todoInput {
+    @apply  bg-white p-8 mx-4;
+    margin-top: 15rem ;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+.form-card{
+    @apply flex ;
+}
+
+input {
+    @apply flex-1 h-12 p-4 pr-0;
+    border: 1px solid rgb(238, 238, 238);
+    outline-color:#5783f8;
+}
+input:focus{
+    border-color:#5783f8 ;
+}
+
+.probation{
+    @apply w-16 h-12 text-white relative overflow-hidden; 
+    outline:none !important;
+    background: #5783f8 ;
+	background-blend-mode: normal, normal;
+	transition: border-color .45s cubic-bezier(.4, 0, .2, 1);
+    -moz-transition: border-color .45s cubic-bezier(.4, 0, .2, 1);
+    -webkit-transition: border-color .45s cubic-bezier(.4, 0, .2, 1);
+}
+
+
+.probation i {
+    @apply absolute inset-0 z-0;
+    display: none \9;
+    background: #4360f5 ;
+    -webkit-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: left center;
+    -ms-transform-origin: left center;
+    transform-origin: left center;
+    -webkit-transition: -webkit-transform .25s cubic-bezier(.4, 0, .2, 1) 75ms;
+    transition: transform .5s cubic-bezier(.4, 0, .2, 1) 75ms;
+    -moz-transition: transform .5s cubic-bezier(.4, 0, .2, 1) 75ms;
+    -o-transition: transform .5s cubic-bezier(.4, 0, .2, 1) 75ms;
+ 
+}
+
+.probation span {
+    @apply leading-4 text-white;
+    font-size: 2rem;
+    transition: transform .25s cubic-bezier(.4, 0, .2, 1), color .45s cubic-bezier(.4, 0, .2, 1) 75ms;
+    -webkit-transition: -webkit-transform .45s cubic-bezier(.4, 0, .2, 1), color .45s cubic-bezier(.4, 0, .2, 1) 75ms;
+    -moz-transition: -moz-transform .45s cubic-bezier(.4, 0, .2, 1), color .45s cubic-bezier(.4, 0, .2, 1) 75ms;
+    display: block;
+}
+
+
+.probation:hover i {
+    -webkit-transform: scaleX(1);
+    -ms-transform: scaleX(1);
+    transform: scaleX(1);
+    animation-duration:3s;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.probation:hover span {
+    @apply leading-4 text-white;
+    font-size: 2rem;
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.list-wrap{
+    @apply mx-4 bg-white;
+    border-bottom-left-radius:1rem;
+    border-bottom-right-radius:1rem;
+}
+
+/* button {
+    @apply py-2 px-4 font-semibold rounded-lg shadow-md bg-blue-400;
+} */
+
+ul {
+    @apply list-none p-8 pt-0;   
+}
+
+li {
+    @apply flex font-light pt-4 pb-4 border-b border-solid border-gray-200;
+}
+
+.list-wrap li span{
+    @apply flex-1 ;
+}
+.logo-container {
+    @apply float-left;
+}
+
+img {
+    height: 25px;
+}
+button.save{
+    @apply w-16 h-12 p-0 flex items-center justify-center relative overflow-hidden;
+    outline:none !important;
+}
+button.save p{
+    @apply w-8 h-12 p-0 m-0;
+    background: url(./save.png) no-repeat center;
+    background-size: 1.6rem auto;
+}
+button.save:hover{
+    opacity: 0.8;
+}
+button.action {
+    @apply w-16 h-12 p-0 flex items-center justify-center relative overflow-hidden;
+    outline:none !important;
+}
+button.action p{
+    @apply w-8 h-12 p-0 m-0;
+    background: url(./delete.png) no-repeat center;
+    background-size: 1.5rem auto;
+}
+button.action:hover{
+   opacity: 0.8;
+}
+button.action:focus {
+    outline: none;
+}
+@media screen and (max-width: 768px) {
+    .todoInput{
+        margin-top: 5rem;
+    }
+}
