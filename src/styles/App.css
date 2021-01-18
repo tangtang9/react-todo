@@ -4,112 +4,65 @@
 }
 
 * {
-    box-sizing: border-box;
+    @apply box-border;
 }
 html{
     @apply h-full;
 }
 body {
-    @apply h-full;
-    font-family:"Microsoft YaHei", "Lato", sans-serif;
-    background: #f5f6f9;
+    @apply h-full font-serif bg-gray-100;
 }
-
 
 .wrapper {
-    @apply bg-gray-100 max-w-2xl m-auto shadow-md;
-    min-height: 50rem;  
-    background: url(./bg.png) no-repeat;
-    background-size: 100% auto;
+    @apply bg-gray-100 max-w-2xl m-auto shadow-md min-h-50 bg-hero-pattern bg-no-repeat bg-100;
 }
 .top-title{
-    @apply flex;
-    padding:3rem 0;
+    @apply flex py-12;
 }
 .title {
-    @apply text-xl font-bold tracking-wide text-center text-gray-700 flex-1 -ml-12;
-    font-family:Microsoft YaHei;
+    @apply text-xl font-bold tracking-wide text-center text-gray-700 flex-1 -ml-12 font-myh;
 }
 
 .todoInput {
-    @apply  bg-white p-8 mx-4;
-    margin-top: 15rem ;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
+    @apply  bg-white p-8 mx-4 mt-60 rounded-t-2xl;
 }
 .form-card{
     @apply flex ;
 }
 
 input {
-    @apply flex-1 h-12 p-4 pr-0;
-    border: 1px solid rgb(238, 238, 238);
-    outline: 0px solid #5783f8;    
-    -moz-outline-radius: 0px;
-}
-input:focus{
-    border-color:#5783f8 ;
+    @apply flex-1 h-12 p-4 pr-0 border-solid border border-gray-200 outline-none focus:border-blue-500;
 }
 
 .probation{
-    @apply w-16 h-12 text-white relative overflow-hidden; 
-    outline:none !important;
-    background: #5783f8 ;
-	background-blend-mode: normal, normal;
-	transition: border-color .45s cubic-bezier(.4, 0, .2, 1);
-    -moz-transition: border-color .45s cubic-bezier(.4, 0, .2, 1);
-    -webkit-transition: border-color .45s cubic-bezier(.4, 0, .2, 1);
+    @apply w-16 h-12 text-white relative overflow-hidden outline-none bg-blue-500 duration-150 ease-linear; 
+}
+.probation:focus{
+    @apply outline-none;
 }
 
-
 .probation i {
-    @apply absolute inset-0 z-0;
-    display: none \9;
-    background: #4360f5 ;
-    -webkit-transform: scaleX(0);
-    -ms-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transform-origin: left center;
-    -ms-transform-origin: left center;
-    transform-origin: left center;
-    -webkit-transition: -webkit-transform .25s cubic-bezier(.4, 0, .2, 1) 75ms;
-    transition: transform .5s cubic-bezier(.4, 0, .2, 1) 75ms;
-    -moz-transition: transform .5s cubic-bezier(.4, 0, .2, 1) 75ms;
-    -o-transition: transform .5s cubic-bezier(.4, 0, .2, 1) 75ms;
+    @apply w-0 h-full absolute top-0 left-0 z-0  origin-left bg-blue-700;
  
 }
 
 .probation span {
-    @apply leading-4 text-white;
-    font-size: 2rem;
-    transition: transform .25s cubic-bezier(.4, 0, .2, 1), color .45s cubic-bezier(.4, 0, .2, 1) 75ms;
-    -webkit-transition: -webkit-transform .45s cubic-bezier(.4, 0, .2, 1), color .45s cubic-bezier(.4, 0, .2, 1) 75ms;
-    -moz-transition: -moz-transform .45s cubic-bezier(.4, 0, .2, 1), color .45s cubic-bezier(.4, 0, .2, 1) 75ms;
-    display: block;
+    @apply absolute top-0 left-0 w-full h-full leading-4 text-white text-4xl flex justify-center items-center outline-none;
 }
 
 
 .probation:hover i {
-    -webkit-transform: scaleX(1);
-    -ms-transform: scaleX(1);
-    transform: scaleX(1);
-    animation-duration:3s;
-    -webkit-transition-delay: 0s;
-    transition-delay: 0s;
+    @apply w-full duration-300;
+ 
 }
 
 .probation:hover span {
-    @apply leading-4 text-white;
-    font-size: 2rem;
-    -webkit-transform: translateX(0);
-    -ms-transform: translateX(0);
-    transform: translateX(0);
+    @apply leading-4 text-white text-4xl;
+    
 }
 
 .list-wrap{
-    @apply mx-4 bg-white;
-    border-bottom-left-radius:1rem;
-    border-bottom-right-radius:1rem;
+    @apply mx-4 bg-white rounded-b-2xl;
 }
 
 /* button {
@@ -132,37 +85,31 @@ li {
 }
 
 img {
-    height: 25px;
+    @apply h-8;
 }
 button.save{
-    @apply w-16 h-12 p-0 flex items-center justify-center relative overflow-hidden;
-    outline:none !important;
+    @apply w-16 h-12 p-0 flex items-center justify-center relative overflow-hidden outline-none;
 }
 button.save p{
-    @apply w-8 h-12 p-0 m-0;
-    background: url(./save.png) no-repeat center;
-    background-size: 1.6rem auto;
+    @apply w-8 h-12 p-0 m-0 bg-save bg-no-repeat bg-center bg-16;
 }
 button.save:hover{
-    opacity: 0.8;
+    @apply opacity-80 ;
 }
 button.action {
     @apply w-16 h-12 p-0 flex items-center justify-center relative overflow-hidden;
-    outline:none !important;
 }
 button.action p{
-    @apply w-8 h-12 p-0 m-0;
-    background: url(./delete.png) no-repeat center;
-    background-size: 1.5rem auto;
+    @apply w-8 h-12 p-0 m-0 bg-delete bg-no-repeat bg-center bg-16;
 }
 button.action:hover{
-   opacity: 0.8;
+    @apply opacity-80 ;
 }
 button.action:focus {
-    outline: none;
+    @apply outline-none;
 }
 @media screen and (max-width: 768px) {
     .todoInput{
-        margin-top: 5rem;
+        @apply mt-20;
     }
 }
