@@ -14,7 +14,7 @@ body {
 }
 
 .wrapper {
-    @apply bg-gray-100 max-w-2xl m-auto shadow-md min-h-50 bg-hero-pattern bg-no-repeat bg-100;
+    @apply bg-gray-100 max-w-lg m-auto shadow-md min-h-50 bg-hero-pattern bg-no-repeat bg-100;
 }
 .top-title{
     @apply flex py-12;
@@ -24,7 +24,7 @@ body {
 }
 
 .todoInput {
-    @apply  bg-white p-8 mx-4 mt-60 rounded-t-2xl;
+    @apply  bg-white p-8 pb-0 mx-4 mt-40 rounded-t-2xl;
 }
 .form-card{
     @apply flex ;
@@ -47,7 +47,7 @@ input {
 }
 
 .probation span {
-    @apply absolute top-0 left-0 w-full h-full leading-4 text-white text-4xl flex justify-center items-center outline-none;
+    @apply absolute top-0 left-0 w-full h-full leading-4 text-white text-2xl flex justify-center items-center outline-none;
 }
 
 
@@ -57,7 +57,7 @@ input {
 }
 
 .probation:hover span {
-    @apply leading-4 text-white text-4xl;
+    @apply leading-4 text-white text-2xl;
     
 }
 
@@ -74,11 +74,17 @@ ul {
 }
 
 li {
-    @apply flex font-light pt-4 pb-4 border-b border-solid border-gray-200;
+    @apply flex font-light pt-3 pb-3 border-b border-solid border-gray-200;
+}
+.list-wrap li:first-child{
+    @apply pt-8;
 }
 
 .list-wrap li span{
     @apply flex-1 flex items-center px-4;
+}
+.list-wrap li input{
+    @apply h-10;
 }
 .logo-container {
     @apply float-left;
@@ -88,7 +94,7 @@ img {
     @apply h-8;
 }
 button.save{
-    @apply w-16 h-12 p-0 flex items-center justify-center relative overflow-hidden outline-none;
+    @apply w-16 h-10 p-0 flex items-center justify-center relative overflow-hidden outline-none;
 }
 button.save p{
     @apply w-8 h-12 p-0 m-0 bg-save bg-no-repeat bg-center bg-16;
@@ -97,7 +103,7 @@ button.save:hover{
     @apply opacity-80 ;
 }
 button.action {
-    @apply w-16 h-12 p-0 flex items-center justify-center relative overflow-hidden;
+    @apply w-16 h-10 p-0 flex items-center justify-center relative overflow-hidden;
 }
 button.action p{
     @apply w-8 h-12 p-0 m-0 bg-delete bg-no-repeat bg-center bg-16;
